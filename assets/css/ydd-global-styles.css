@@ -1,3 +1,10 @@
-
+.elementor-widget-heading .elementor-heading-title {
+  color: var(--e-global-color-primary);
+  font-family: var(--e-global-typography-primary-font-family);
+  font-weight: var(--e-global-typography-primary-font-weight);
+  padding: 0;
+  margin: 0;
+  line-height: 1;
+}
 
 /*# sourceMappingURL=ydd-global-styles.css.map */
