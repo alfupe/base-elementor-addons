@@ -39,6 +39,7 @@ class Extension {
 
     public function register_widgets() {
         Plugin::instance()->widgets_manager->register_widget_type(new Widgets\TaxonomyTerms());
+        Plugin::instance()->widgets_manager->register_widget_type(new Widgets\TitlePrimary());
     }
 }
 
