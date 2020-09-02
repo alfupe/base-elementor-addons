@@ -1,0 +1,11 @@
+.cca-taxonomy-terms {
+    display: grid;
+    grid-template-rows: 1fr;
+
+    &__term {
+        display: flex;
+        align-items: center;
+        transition: all 0.15s ease;
+        box-shadow: 10px 5px 10px 0 #0c0c0c, -4px -4px 9px 0px #313131 !important;
+    }
+}
