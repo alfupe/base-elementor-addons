@@ -36,6 +36,10 @@ class TitlePrimary extends Widget_Base {
         return ['base_elementor_addons_custom_category'];
     }
 
+    public function get_style_depends() {
+        return ['ydd-global-styles'];
+    }
+
 	public function get_keywords() {
 		return ['heading', 'title', 'text'];
 	}
