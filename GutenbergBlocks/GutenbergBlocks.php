@@ -1,6 +1,8 @@
 <?php
 namespace GutenbergBlocks;
 
+use GutenbergBlocks\Blocks\ExampleBlock;
+
 class GutenbergBlocks {
 
     private static $_instance = null;
@@ -25,7 +27,8 @@ class GutenbergBlocks {
     }
 
     public function register_blocks() {
-        require_once('Blocks/ExampleBlock.php');
+        //require_once('Blocks/ExampleBlock.php');
+        new ExampleBlock();
     }
 }
 

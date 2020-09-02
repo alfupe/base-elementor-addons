@@ -53,5 +53,3 @@ class ExampleBlock extends BaseBlock {
         <?php
     }
 }
-
-new ExampleBlock();
