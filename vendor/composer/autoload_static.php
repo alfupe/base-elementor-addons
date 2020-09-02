@@ -7,6 +7,10 @@ namespace Composer\Autoload;
 class ComposerStaticInitc043d09827c62c7227a4adc5bfec90b9
 {
     public static $prefixLengthsPsr4 = array (
+        'G' => 
+        array (
+            'GutenbergBlocks\\' => 16,
+        ),
         'E' => 
         array (
             'Extension\\' => 10,
@@ -14,6 +18,10 @@ class ComposerStaticInitc043d09827c62c7227a4adc5bfec90b9
     );
 
     public static $prefixDirsPsr4 = array (
+        'GutenbergBlocks\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/GutenbergBlocks',
+        ),
         'Extension\\' => 
         array (
             0 => __DIR__ . '/../..' . '/Extension',

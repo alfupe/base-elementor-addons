@@ -1,7 +1,8 @@
 {
     "autoload": {
         "psr-4": {
-            "Extension\\": "Extension/"
+            "Extension\\": "Extension/",
+            "GutenbergBlocks\\": "GutenbergBlocks/"
         }
     },
     "require": {

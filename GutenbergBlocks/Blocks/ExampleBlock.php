@@ -1,7 +1,7 @@
 <?php
 namespace GutenbergBlocks\Blocks;
 
-use GutenbergBlocks\Blocks\BaseBlock as BaseBlock;
+//use GutenbergBlocks\Blocks\BaseBlock as BaseBlock;
 
 if (!defined( 'WPINC')) {
 	die;
