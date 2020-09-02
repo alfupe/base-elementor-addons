@@ -7,9 +7,9 @@ if (!defined( 'WPINC')) {
 	die;
 }
 
-class ExampleBlock {
+class ExampleBlock extends BaseBlock {
     function __construct($args = []) {
-        //parent::__construct();
+        parent::__construct();
 
         if (function_exists('acf_register_block_type')) {
             add_action('acf/init', [$this, 'register_acf_block_type']);
