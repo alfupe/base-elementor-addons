@@ -1,5 +1,5 @@
 <?php
-namespace Blocks;
+namespace GutenbergBlocks\Blocks;
 
 if (!defined( 'ABSPATH')) {
     exit; // Exit if accessed directly.

@@ -1,5 +1,5 @@
 <?php
-namespace Blocks;
+namespace GutenbergBlocks\Blocks;
 
 if (!defined( 'WPINC')) {
 	die;
