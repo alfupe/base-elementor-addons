@@ -14,11 +14,11 @@ class TaxonomyTerms extends Widget_Base {
     public function __construct($data = [], $args = null) {
         parent::__construct($data, $args);
 
-        wp_register_style('cca-taxonomy-terms', plugins_url('../assets/css/taxonomy-terms.css', __DIR__));
+        wp_register_style('ydd-taxonomy-terms', plugins_url('../assets/css/taxonomy-terms.css', __DIR__));
     }
 
     public function get_name() {
-        return 'cca-taxonomy-terms';
+        return 'ydd-taxonomy-terms';
     }
 
     public function get_title() {
@@ -30,11 +30,11 @@ class TaxonomyTerms extends Widget_Base {
     }
 
     public function get_categories() {
-        return ['calmachicha_addons'];
+        return ['base_elementor_addons_custom_category'];
     }
 
     public function get_style_depends() {
-        return ['cca-taxonomy-terms'];
+        return ['ydd-taxonomy-terms'];
     }
 
     private function get_post_types() {
@@ -184,7 +184,7 @@ class TaxonomyTerms extends Widget_Base {
                     12 => 12
                 ],
                 'selectors' => [
-                    '{{WRAPPER}} .cca-taxonomy-terms' => 'grid-template-columns: repeat({{VALUE}}, 1fr);',
+                    '{{WRAPPER}} .ydd-taxonomy-terms' => 'grid-template-columns: repeat({{VALUE}}, 1fr);',
                 ],
             ]
         );
@@ -215,7 +215,7 @@ class TaxonomyTerms extends Widget_Base {
                     'unit' => 'px',
                 ],
                 'selectors' => [
-                    '{{WRAPPER}} .cca-taxonomy-terms' => 'column-gap: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .ydd-taxonomy-terms' => 'column-gap: {{SIZE}}{{UNIT}};',
                 ],
             ]
         );
@@ -246,7 +246,7 @@ class TaxonomyTerms extends Widget_Base {
                     'unit' => 'px',
                 ],
                 'selectors' => [
-                    '{{WRAPPER}} .cca-taxonomy-terms' => 'row-gap: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .ydd-taxonomy-terms' => 'row-gap: {{SIZE}}{{UNIT}};',
                 ]
             ]
         );
@@ -273,7 +273,7 @@ class TaxonomyTerms extends Widget_Base {
                 ],
                 'devices' => ['desktop', 'tablet'],
                 'selectors' => [
-                    '{{WRAPPER}} .cca-taxonomy-terms__term' => 'justify-content: {{%s}};',
+                    '{{WRAPPER}} .ydd-taxonomy-terms__term' => 'justify-content: {{%s}};',
                 ],
             ]
         );
@@ -302,7 +302,7 @@ class TaxonomyTerms extends Widget_Base {
                     'unit' => 'px',
                 ],
                 'selectors' => [
-                    '{{WRAPPER}} .cca-taxonomy-terms__term' => 'border-radius: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .ydd-taxonomy-terms__term' => 'border-radius: {{SIZE}}{{UNIT}};',
                 ]
             ]
         );
@@ -314,7 +314,7 @@ class TaxonomyTerms extends Widget_Base {
                 'type' => Controls_Manager::DIMENSIONS,
                 'size_units' => ['px', 'em', '%'],
                 'selectors' => [
-                    '{{WRAPPER}} .cca-taxonomy-terms__term' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .ydd-taxonomy-terms__term' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
@@ -323,7 +323,7 @@ class TaxonomyTerms extends Widget_Base {
             Group_Control_Typography::get_type(),
             [
                 'name' => 'typography',
-                'selector' => '{{WRAPPER}} .cca-taxonomy-terms__term',
+                'selector' => '{{WRAPPER}} .ydd-taxonomy-terms__term',
             ]
         );
 
@@ -343,7 +343,7 @@ class TaxonomyTerms extends Widget_Base {
                 'type' => Controls_Manager::COLOR,
                 'default' => '#ffffff',
                 'selectors' => [
-                    '{{WRAPPER}} .cca-taxonomy-terms__term' => 'background-color: {{VALUE}};',
+                    '{{WRAPPER}} .ydd-taxonomy-terms__term' => 'background-color: {{VALUE}};',
                 ],
             ]
         );
@@ -355,7 +355,7 @@ class TaxonomyTerms extends Widget_Base {
                 'type' => Controls_Manager::COLOR,
                 'default' => '#ffffff',
                 'selectors' => [
-                    '{{WRAPPER}} .cca-taxonomy-terms__term' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .ydd-taxonomy-terms__term' => 'color: {{VALUE}};',
                 ],
             ]
         );
@@ -376,7 +376,7 @@ class TaxonomyTerms extends Widget_Base {
                 'type' => Controls_Manager::COLOR,
                 'default' => '#ffffff',
                 'selectors' => [
-                    '{{WRAPPER}} .cca-taxonomy-terms__term:hover' => 'background-color: {{VALUE}};',
+                    '{{WRAPPER}} .ydd-taxonomy-terms__term:hover' => 'background-color: {{VALUE}};',
                 ],
             ]
         );
@@ -388,7 +388,7 @@ class TaxonomyTerms extends Widget_Base {
                 'type' => Controls_Manager::COLOR,
                 'default' => '#ffffff',
                 'selectors' => [
-                    '{{WRAPPER}} .cca-taxonomy-terms__term:hover' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .ydd-taxonomy-terms__term:hover' => 'color: {{VALUE}};',
                 ],
             ]
         );
@@ -407,7 +407,7 @@ class TaxonomyTerms extends Widget_Base {
         $this->add_render_attribute(
             'wrapper',
             [
-                'class' => ['cca-taxonomy-terms', $settings['_css_classes']]
+                'class' => ['ydd-taxonomy-terms', $settings['_css_classes']]
             ]
         );
         ?>
@@ -417,7 +417,7 @@ class TaxonomyTerms extends Widget_Base {
                 if (term_exists($term, $taxonomy)):
                     $full_term = get_term_by('slug', $term, $taxonomy);
                 ?>
-                <a class="cca-taxonomy-terms__term"
+                <a class="ydd-taxonomy-terms__term"
                    href="<?= get_term_link($full_term->term_id) ?>"><?= $full_term->name ?></a>
             <?php
                 endif;

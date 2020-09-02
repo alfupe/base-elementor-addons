@@ -1,8 +1,8 @@
-.cca-taxonomy-terms {
+.ydd-taxonomy-terms {
   display: grid;
   grid-template-rows: 1fr;
 }
-.cca-taxonomy-terms__term {
+.ydd-taxonomy-terms__term {
   display: flex;
   align-items: center;
   transition: all 0.15s ease;

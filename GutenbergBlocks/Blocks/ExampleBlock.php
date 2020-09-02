@@ -1,8 +1,6 @@
 <?php
 namespace GutenbergBlocks\Blocks;
 
-//use GutenbergBlocks\Blocks\BaseBlock as BaseBlock;
-
 if (!defined( 'WPINC')) {
 	die;
 }
@@ -21,11 +19,10 @@ class ExampleBlock extends BaseBlock {
     function __construct($args = []) {
         parent::__construct();
 
+        // It requires ACF
         if (function_exists('acf_register_block_type')) {
             add_action('acf/init', [$this, 'register_acf_block_type']);
         }
-
-        var_dump('holi me cargo mágicamente');
     }
 
     public function register_acf_block_type() {

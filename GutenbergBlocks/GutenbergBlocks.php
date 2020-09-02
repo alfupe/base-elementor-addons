@@ -27,7 +27,6 @@ class GutenbergBlocks {
     }
 
     public function register_blocks() {
-        //require_once('Blocks/ExampleBlock.php');
         ExampleBlock::instance();
     }
 }
