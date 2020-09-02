@@ -8,6 +8,16 @@ if (!defined( 'WPINC')) {
 }
 
 class ExampleBlock extends BaseBlock {
+    private static $_instance = null;
+
+    public static function instance() {
+        if (is_null(self::$_instance)) {
+            self::$_instance = new self();
+        }
+
+        return self::$_instance;
+    }
+
     function __construct($args = []) {
         parent::__construct();
 
